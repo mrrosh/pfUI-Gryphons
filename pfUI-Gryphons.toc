@@ -1,0 +1,9 @@
+## Interface: 11200
+## Title: |cff33ffccpf|cffffffffUI|cffaaaaaa [Gryphons]
+## Author: Mr_Rosh
+## Notes: Add back the gryphons to your actionbars.
+## Version: 1.0
+## Dependencies: pfUI
+
+# main
+pfUI-gryphons.lua
