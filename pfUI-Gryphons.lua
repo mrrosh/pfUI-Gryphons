@@ -1,80 +1,83 @@
 pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   pfUI.gui.dropdowns.Gryphons_selectleft = {
-  "None:" .. T["None"],
-    "Griffon:" .. T["Griffon"],
+	"Default:" .. T["Default"],
+	"None:" .. T["None"],
+    "Lion:" .. T["Lion"],
     "Shagu:" .. T["Shagu"],
     "Diablo1:" .. T["Diablo1"],
     "Diablo2:" .. T["Diablo2"],
     "Diablo3:" .. T["Diablo3"],
     "Diablo4:" .. T["Diablo4"],
-    "Gargoyle:" .. T["Gargoyle"],
+    "Gargoyle1:" .. T["Gargoyle"],
     "Gargoyle2:" .. T["Gargoyle2"],
     "Onyxia:" .. T["Onyxia"],
-  "Murloc1:" .. T["Murloc1"],
-  "Murloc2:" .. T["Murloc2"],
-    "Holy:" .. T["Holy"],
-  "Bear:" .. T["Bear"],
-  "Cat:" .. T["Cat"],
-  "Dead:" .. T["Dead"],
-  "Frost:" .. T["Frost"],
-  "Metamorph:" .. T["Metamorph"],
-  "Fire:" .. T["Fire"],
-  "Storm:" .. T["Storm"],
-  "Unholy:" .. T["Unholy"],
-  "Simple:" .. T["Simple"],
-  "Water:" .. T["Water"]
+    "Murloc1:" .. T["Murloc1"],
+	"Murloc2:" .. T["Murloc2"],
+	"Bear:" .. T["Bear"],
+	"Cat:" .. T["Cat"],
+	"Dead:" .. T["Dead"],
+	"Frost:" .. T["Frost"],
+	"Metamorph:" .. T["Metamorph"],
+	"Fire:" .. T["Fire"],
+	"Storm:" .. T["Storm"],
+	"Holy:" .. T["Holy"],
+	"Unholy:" .. T["Unholy"],
+	"Simple:" .. T["Simple"],
+	"Water:" .. T["Water"]
   }
   
   pfUI.gui.dropdowns.Gryphons_selectright = {
-  "None:" .. T["None"],
-    "Griffon:" .. T["Griffon"],
+    "Default:" .. T["Default"],
+	"None:" .. T["None"],
+    "Lion:" .. T["Lion"],
     "Shagu:" .. T["Shagu"],
     "Diablo1:" .. T["Diablo1"],
     "Diablo2:" .. T["Diablo2"],
     "Diablo3:" .. T["Diablo3"],
     "Diablo4:" .. T["Diablo4"],
-    "Gargoyle:" .. T["Gargoyle"],
+    "Gargoyle1:" .. T["Gargoyle"],
     "Gargoyle2:" .. T["Gargoyle2"],
     "Onyxia:" .. T["Onyxia"],
-  "Murloc1:" .. T["Murloc1"],
-  "Murloc2:" .. T["Murloc2"],
-    "Holy:" .. T["Holy"],
-  "Bear:" .. T["Bear"],
-  "Cat:" .. T["Cat"],
-  "Dead:" .. T["Dead"],
-  "Frost:" .. T["Frost"],
-  "Metamorph:" .. T["Metamorph"],
-  "Fire:" .. T["Fire"],
-  "Storm:" .. T["Storm"],
-  "Unholy:" .. T["Unholy"],
-  "Simple:" .. T["Simple"],
-  "Water:" .. T["Water"]
+	"Murloc1:" .. T["Murloc1"],
+	"Murloc2:" .. T["Murloc2"],
+	"Bear:" .. T["Bear"],
+	"Cat:" .. T["Cat"],
+	"Dead:" .. T["Dead"],
+	"Frost:" .. T["Frost"],
+	"Metamorph:" .. T["Metamorph"],
+	"Fire:" .. T["Fire"],
+	"Storm:" .. T["Storm"],
+	"Holy:" .. T["Holy"],
+	"Unholy:" .. T["Unholy"],
+	"Simple:" .. T["Simple"],
+	"Water:" .. T["Water"]
   }
   
   pfUI.gui.dropdowns.Gryphons_selectrighttop = {
-  "None:" .. T["None"],
-    "Griffon:" .. T["Griffon"],
+	"Default:" .. T["Default"],
+	"None:" .. T["None"],
+    "Lion:" .. T["Lion"],
     "Shagu:" .. T["Shagu"],
     "Diablo1:" .. T["Diablo1"],
     "Diablo2:" .. T["Diablo2"],
     "Diablo3:" .. T["Diablo3"],
     "Diablo4:" .. T["Diablo4"],
-    "Gargoyle:" .. T["Gargoyle"],
+    "Gargoyle1:" .. T["Gargoyle"],
     "Gargoyle2:" .. T["Gargoyle2"],
     "Onyxia:" .. T["Onyxia"],
-  "Murloc1:" .. T["Murloc1"],
-  "Murloc2:" .. T["Murloc2"],
-    "Holy:" .. T["Holy"],
-  "Bear:" .. T["Bear"],
-  "Cat:" .. T["Cat"],
-  "Dead:" .. T["Dead"],
-  "Frost:" .. T["Frost"],
-  "Metamorph:" .. T["Metamorph"],
-  "Fire:" .. T["Fire"],
-  "Storm:" .. T["Storm"],
-  "Unholy:" .. T["Unholy"],
-  "Simple:" .. T["Simple"],
-  "Water:" .. T["Water"]
+	"Murloc1:" .. T["Murloc1"],
+	"Murloc2:" .. T["Murloc2"],
+	"Bear:" .. T["Bear"],
+	"Cat:" .. T["Cat"],
+	"Dead:" .. T["Dead"],
+	"Frost:" .. T["Frost"],
+	"Metamorph:" .. T["Metamorph"],
+	"Fire:" .. T["Fire"],
+	"Storm:" .. T["Storm"],
+	"Holy:" .. T["Holy"],
+	"Unholy:" .. T["Unholy"],
+	"Simple:" .. T["Simple"],
+	"Water:" .. T["Water"]
   }
 
   -- detect current addon path
@@ -126,8 +129,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
     end)
   end
   pfUI:UpdateConfig("Gryphons",       nil,         "header")
-  pfUI:UpdateConfig("Gryphons",       nil,         "selectleft",   "Griffon")
-  pfUI:UpdateConfig("Gryphons",       nil,         "selectright",   "Griffon")
+  pfUI:UpdateConfig("Gryphons",       nil,         "selectleft",   "Default")
+  pfUI:UpdateConfig("Gryphons",       nil,         "selectright",   "Default")
   pfUI:UpdateConfig("Gryphons",       nil,         "selectrighttop",   "None")
   pfUI:UpdateConfig("Gryphons",       nil,         "img_size",   "100")
   pfUI:UpdateConfig("Gryphons",       nil,         "h_off",   "-75")
@@ -142,1322 +145,319 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   pfUI:UpdateConfig("Gryphons",       nil,         "right_color",   "1,1,1")
   pfUI:UpdateConfig("Gryphons",       nil,         "righttop_color",   "1,1,1")
 
-
-
 ----------------
 -- Left  side --
 ----------------
 
+local function AddLeftGriphon(texture)
+  local r,g,b,a = GetStringColor(C.Gryphons.left_color)
+  local hoff = C.Gryphons.h_off
+  local voff = C.Gryphons.v_off
+  local size = C.Gryphons.img_size
+
+  -- create griphon frame
+  local f = CreateFrame("Frame",nil,pfActionBarMain)
+  f:SetFrameStrata("HIGH")
+  f:SetWidth(size)
+  f:SetHeight(size)
+
+  -- create griphon texture
+  local t = f:CreateTexture(nil,"HIGH")
+  t:SetTexture(texture)
+  t:SetVertexColor(r,g,b,a)
+  t:SetAllPoints(f)
+  f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
+  f:Show()
+  f:SetParent(pfActionBarMain)
+  f.texture = t
+  
+  return f
+end
+
+local function AddLeftGriphonExtended(texture)
+  local r,g,b,a = GetStringColor(C.Gryphons.left_color)
+  local hoff = C.Gryphons.h_off
+  local voff = C.Gryphons.v_off
+  local size = C.Gryphons.img_size
+
+  -- create griphon frame
+  local f = CreateFrame("Frame",nil,pfActionBarMain)
+  f:SetFrameStrata("BACKGROUND")
+  f:SetWidth(size+156)
+  f:SetHeight(size+28)
+
+  -- create griphon texture
+  local t = f:CreateTexture(nil,"BACKGROUND")
+  t:SetTexture(texture)
+  t:SetVertexColor(r,g,b,a)
+  t:SetAllPoints(f)
+  f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
+  f:Show()
+  f:SetParent(pfActionBarMain)
+  f.texture = t
+  
+  return f
+end
+
+
 if C.Gryphons.selectleft == "Default" then
-
-local r,g,b,a = GetStringColor(C.Gryphons.left_color)
-local hoff = C.Gryphons.h_off
-local voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-local t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\griffon")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\griffon")
 elseif C.Gryphons.selectleft == "None" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\griffon")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Hide()
-f:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectleft == "Griffon" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\griffon")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphon(nil)
+elseif C.Gryphons.selectleft == "Lion" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion")
 elseif C.Gryphons.selectleft == "Shagu" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\shagu.blp")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\shagu")
 elseif C.Gryphons.selectleft == "Diablo1" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo1")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo1")
 elseif C.Gryphons.selectleft == "Diablo2" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo1_roth")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo2")
 elseif C.Gryphons.selectleft == "Diablo3" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo2")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo3")
 elseif C.Gryphons.selectleft == "Diablo4" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo2_roth")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectleft == "Gargoyle" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\garg1")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo4")
+elseif C.Gryphons.selectleft == "Gargoyle1" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle1")
 elseif C.Gryphons.selectleft == "Gargoyle2" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\garg2")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle2")
 elseif C.Gryphons.selectleft == "Onyxia" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\onyxia")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\onyxia")
 elseif C.Gryphons.selectleft == "Murloc1" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\murloc")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc1")
 elseif C.Gryphons.selectleft == "Murloc2" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("HIGH")
-f:SetWidth(size)
-f:SetHeight(size)
-t = f:CreateTexture(nil,"HIGH")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\murloc2")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectleft == "Holy" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("BACKGROUND")
-f:SetWidth(size+156)
-f:SetHeight(size+28)
-t = f:CreateTexture(nil,"BACKGROUND")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\leftshadow_holy")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc2")
 elseif C.Gryphons.selectleft == "Bear" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("BACKGROUND")
-f:SetWidth(size+156)
-f:SetHeight(size+28)
-t = f:CreateTexture(nil,"BACKGROUND")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\leftshadow_bear")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_bear")
 elseif C.Gryphons.selectleft == "Cat" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("BACKGROUND")
-f:SetWidth(size+156)
-f:SetHeight(size+28)
-t = f:CreateTexture(nil,"BACKGROUND")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\leftshadow_cat")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_cat")
 elseif C.Gryphons.selectleft == "Dead" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("BACKGROUND")
-f:SetWidth(size+156)
-f:SetHeight(size+28)
-t = f:CreateTexture(nil,"BACKGROUND")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\leftshadow_dead")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_dead")
 elseif C.Gryphons.selectleft == "Frost" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("BACKGROUND")
-f:SetWidth(size+156)
-f:SetHeight(size+28)
-t = f:CreateTexture(nil,"BACKGROUND")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\leftshadow_frost")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_frost")
 elseif C.Gryphons.selectleft == "Metamorph" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("BACKGROUND")
-f:SetWidth(size+156)
-f:SetHeight(size+28)
-t = f:CreateTexture(nil,"BACKGROUND")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\leftshadow_metamorph")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_metamorph")
 elseif C.Gryphons.selectleft == "Fire" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("BACKGROUND")
-f:SetWidth(size+156)
-f:SetHeight(size+28)
-t = f:CreateTexture(nil,"BACKGROUND")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\leftshadow_shaman_fire")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_shaman_fire")
 elseif C.Gryphons.selectleft == "Storm" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("BACKGROUND")
-f:SetWidth(size+156)
-f:SetHeight(size+28)
-t = f:CreateTexture(nil,"BACKGROUND")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\leftshadow_shaman_storm")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_shaman_storm")
+elseif C.Gryphons.selectleft == "Holy" then
+  AddLeftGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_holy")
 elseif C.Gryphons.selectleft == "Unholy" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("BACKGROUND")
-f:SetWidth(size+156)
-f:SetHeight(size+28)
-t = f:CreateTexture(nil,"BACKGROUND")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\leftshadow_unholy")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_unholy")
 elseif C.Gryphons.selectleft == "Simple" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("BACKGROUND")
-f:SetWidth(size+156)
-f:SetHeight(size+28)
-t = f:CreateTexture(nil,"BACKGROUND")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\leftshadowcombat")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadowcombat")  
 elseif C.Gryphons.selectleft == "Water" then
-r,g,b,a = GetStringColor(C.Gryphons.left_color)
-size = C.Gryphons.img_size
-hoff = C.Gryphons.h_off
-voff = C.Gryphons.v_off
-f = CreateFrame("Frame",nil,pfActionBarMain)
-f:SetFrameStrata("BACKGROUND")
-f:SetWidth(size+156)
-f:SetHeight(size+28)
-t = f:CreateTexture(nil,"BACKGROUND")
-t:SetTexture("Interface\\AddOns\\pfUI-gryphons\\leftshadowswim")
-t:SetVertexColor(r,g,b,a)
-t:SetAllPoints(f)
-f.texture = t
-f:SetPoint("BOTTOMLEFT", pfActionBarMain,"BOTTOMLEFT", hoff-175,voff)
-f:Show()
-f:SetParent(pfActionBarMain)
-
+  AddLeftGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadowswim")
 end
 
 ----------------
 -- Right side --
 ----------------
 
-if C.Gryphons.selectright == "Default" then
 
-local q,w,e,z = GetStringColor(C.Gryphons.right_color)
-local size1 = C.Gryphons.img_size1
-local hoff1 = C.Gryphons.h_off1
-local voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\griffon1")
-t:SetVertexColor(r,g,b,a)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
+local function AddRightGriphon(texture)
+  local r1,g1,b1,a1 = GetStringColor(C.Gryphons.right_color)
+  local hoff1 = C.Gryphons.h_off1
+  local voff1 = C.Gryphons.v_off1
+  local size1 = C.Gryphons.img_size1
 
-elseif C.Gryphons.selectright == "None" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\griffon1")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Hide()
-fr:SetParent(pfActionBarMain)
+  -- create griphon frame
+  local fr = CreateFrame("Frame",nil,pfActionBarMain)
+  fr:SetFrameStrata("HIGH")
+  fr:SetWidth(size1)
+  fr:SetHeight(size1)
 
-elseif C.Gryphons.selectright == "Griffon" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\griffon1")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Shagu" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\shagu1.blp")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Diablo1" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo11")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Diablo2" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo11_roth")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Diablo3" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo22")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Diablo4" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo22_roth")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Gargoyle" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\garg11")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Gargoyle2" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\garg22")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Onyxia" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\onyxia1")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Murloc1" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\murloc1")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Murloc2" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size1)
-fr:SetHeight(size1)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\murloc22")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Holy" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size1+156)
-fr:SetHeight(size1+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_holy")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Bear" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size1+156)
-fr:SetHeight(size1+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_bear")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Cat" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size1+156)
-fr:SetHeight(size1+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_cat")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Dead" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size1+156)
-fr:SetHeight(size1+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_dead")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Frost" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size1+156)
-fr:SetHeight(size1+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_frost")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Metamorph" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size1+156)
-fr:SetHeight(size1+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_metamorph")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Fire" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size1+156)
-fr:SetHeight(size1+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_shaman_fire")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Storm" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size1+156)
-fr:SetHeight(size1+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_shaman_storm")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Unholy" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size1+156)
-fr:SetHeight(size1+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_unholy")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Simple" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size1+156)
-fr:SetHeight(size1+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadowcombat")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
-elseif C.Gryphons.selectright == "Water" then
-q,w,e,z = GetStringColor(C.Gryphons.right_color)
-size1 = C.Gryphons.img_size1
-hoff1 = C.Gryphons.h_off1
-voff1 = C.Gryphons.v_off1
-fr = CreateFrame("Frame",nil,pfActionBarMain)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size1+156)
-fr:SetHeight(size1+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadowswim")
-tr:SetVertexColor(q,w,e,z)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
-fr:Show()
-fr:SetParent(pfActionBarMain)
-
+  -- create griphon texture
+  local tr = fr:CreateTexture(nil,"HIGH")
+  tr:SetTexture(texture)
+  tr:SetVertexColor(r1,g1,b1,a1)
+  tr:SetAllPoints(fr)
+  fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1,voff1)
+  fr:Show()
+  fr:SetParent(pfActionBarMain)
+  fr.texture = tr
+  
+  return fr
 end
+
+local function AddRightGriphonExtended(texture)
+  local r1,g1,b1,a1 = GetStringColor(C.Gryphons.right_color)
+  local hoff1 = C.Gryphons.h_off1
+  local voff1 = C.Gryphons.v_off1
+  local size1 = C.Gryphons.img_size1
+
+  -- create griphon frame
+  local fr = CreateFrame("Frame",nil,pfActionBarMain)
+  fr:SetFrameStrata("BACKGROUND")
+  fr:SetWidth(size1+156)
+  fr:SetHeight(size1+28)
+
+  -- create griphon texture
+  local tr = fr:CreateTexture(nil,"BACKGROUND")
+  tr:SetTexture(texture)
+  tr:SetVertexColor(r1,g1,b1,a1)
+  tr:SetAllPoints(fr)
+  fr:SetPoint("BOTTOMRIGHT", pfActionBarMain,"BOTTOMRIGHT", hoff1+175,voff1)
+  fr:Show()
+  fr:SetParent(pfActionBarMain)
+  fr.texture = tr
+  
+  return fr
+end
+
+if C.Gryphons.selectright == "Default" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\griffon1")
+elseif C.Gryphons.selectright == "None" then
+  AddRightGriphon(nil)
+elseif C.Gryphons.selectright == "Lion" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion1")
+elseif C.Gryphons.selectright == "Shagu" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\shagu1")
+elseif C.Gryphons.selectright == "Diablo1" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo11")
+elseif C.Gryphons.selectright == "Diablo2" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo22")
+elseif C.Gryphons.selectright == "Diablo3" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo33")
+elseif C.Gryphons.selectright == "Diablo4" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo44")
+elseif C.Gryphons.selectright == "Gargoyle1" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle11")
+elseif C.Gryphons.selectright == "Gargoyle2" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle22")
+elseif C.Gryphons.selectright == "Onyxia" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\onyxia1")
+elseif C.Gryphons.selectright == "Murloc1" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc11")
+elseif C.Gryphons.selectright == "Murloc2" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc22")
+elseif C.Gryphons.selectright == "Bear" then
+  AddRightGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_bear")
+elseif C.Gryphons.selectright == "Cat" then
+  AddRightGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_cat")
+elseif C.Gryphons.selectright == "Dead" then
+  AddRightGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_dead")
+elseif C.Gryphons.selectright == "Frost" then
+  AddRightGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_frost")
+elseif C.Gryphons.selectright == "Metamorph" then
+  AddRightGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_metamorph")
+elseif C.Gryphons.selectright == "Fire" then
+  AddRightGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_shaman_fire")
+elseif C.Gryphons.selectright == "Storm" then
+  AddRightGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_shaman_storm")
+elseif C.Gryphons.selectright == "Holy" then
+  AddRightGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_holy")
+elseif C.Gryphons.selectright == "Unholy" then
+  AddRightGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_unholy")
+elseif C.Gryphons.selectright == "Simple" then
+  AddRightGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadowcombat")  
+elseif C.Gryphons.selectright == "Water" then
+  AddRightGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadowswim")
+end
+
 
 ----------------
 -- Right side top --
 ----------------
 
+local function AddRightTopGriphon(texture)
+  local r2,g2,b2,a2 = GetStringColor(C.Gryphons.righttop_color)
+  local hoff2 = C.Gryphons.h_off2
+  local voff2 = C.Gryphons.v_off2
+  local size2 = C.Gryphons.img_size2
+
+  -- create griphon frame
+  local frt = CreateFrame("Frame",nil,pfActionBarMain)
+  frt:SetFrameStrata("HIGH")
+  frt:SetWidth(size2)
+  frt:SetHeight(size2)
+
+  -- create griphon texture
+  local trt = frt:CreateTexture(nil,"HIGH")
+  trt:SetTexture(texture)
+  trt:SetVertexColor(r2,g2,b2,a2)
+  trt:SetAllPoints(frt)
+  frt:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
+  frt:Show()
+  frt:SetParent(pfActionBarTop)
+  frt.texture = trt
+  
+  return frt
+end
+
+local function AddRightTopGriphonExtended(texture)
+  local r2,g2,b2,a2 = GetStringColor(C.Gryphons.righttop_color)
+  local hoff2 = C.Gryphons.h_off2
+  local voff2 = C.Gryphons.v_off2
+  local size2 = C.Gryphons.img_size2
+
+  -- create griphon frame
+  local frt = CreateFrame("Frame",nil,pfActionBarMain)
+  frt:SetFrameStrata("BACKGROUND")
+  frt:SetWidth(size2+156)
+  frt:SetHeight(size2+28)
+
+  -- create griphon texture
+  local trt = frt:CreateTexture(nil,"BACKGROUND")
+  trt:SetTexture(texture)
+  trt:SetVertexColor(r2,g2,b2,a2)
+  trt:SetAllPoints(frt)
+  frt:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
+  frt:Show()
+  frt:SetParent(pfActionBarTop)
+  frt.texture = trt
+  
+  return frt
+end
+
 if C.Gryphons.selectrighttop == "Default" then
-
-local c,v,b,n = GetStringColor(C.Gryphons.right_color)
-local size2 = C.Gryphons.img_size2
-local hoff2 = C.Gryphons.h_off2
-local voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\griffon1")
-t:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\griffon1")
 elseif C.Gryphons.selectrighttop == "None" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\griffon1")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Hide()
-fr:SetParent(pfActionBarTop)
-
-elseif C.Gryphons.selectrighttop == "Griffon" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\griffon1")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphon(nil)
+elseif C.Gryphons.selectrighttop == "Lion" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion1")
 elseif C.Gryphons.selectrighttop == "Shagu" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\shagu1.blp")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\shagu1")
 elseif C.Gryphons.selectrighttop == "Diablo1" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo11")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo11")
 elseif C.Gryphons.selectrighttop == "Diablo2" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo11_roth")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo22")
 elseif C.Gryphons.selectrighttop == "Diablo3" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo22")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo33")
 elseif C.Gryphons.selectrighttop == "Diablo4" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\diablo22_roth")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
-elseif C.Gryphons.selectrighttop == "Gargoyle" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\garg11")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo44")
+elseif C.Gryphons.selectrighttop == "Gargoyle1" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle11")
 elseif C.Gryphons.selectrighttop == "Gargoyle2" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\garg22")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle22")
 elseif C.Gryphons.selectrighttop == "Onyxia" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\onyxia1")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\onyxia1")
 elseif C.Gryphons.selectrighttop == "Murloc1" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\murloc1")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc11")
 elseif C.Gryphons.selectrighttop == "Murloc2" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("HIGH")
-fr:SetWidth(size2)
-fr:SetHeight(size2)
-tr = fr:CreateTexture(nil,"HIGH")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\murloc22")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
-elseif C.Gryphons.selectrighttop == "Holy" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size2+156)
-fr:SetHeight(size2+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_holy")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc22")
 elseif C.Gryphons.selectrighttop == "Bear" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size2+156)
-fr:SetHeight(size2+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_bear")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_bear")
 elseif C.Gryphons.selectrighttop == "Cat" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size2+156)
-fr:SetHeight(size2+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_cat")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_cat")
 elseif C.Gryphons.selectrighttop == "Dead" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size2+156)
-fr:SetHeight(size2+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_dead")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_dead")
 elseif C.Gryphons.selectrighttop == "Frost" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size2+156)
-fr:SetHeight(size2+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_frost")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_frost")
 elseif C.Gryphons.selectrighttop == "Metamorph" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size2+156)
-fr:SetHeight(size2+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_metamorph")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_metamorph")
 elseif C.Gryphons.selectrighttop == "Fire" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size2+156)
-fr:SetHeight(size2+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_shaman_fire")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_shaman_fire")
 elseif C.Gryphons.selectrighttop == "Storm" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size2+156)
-fr:SetHeight(size2+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_shaman_storm")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_shaman_storm")
+elseif C.Gryphons.selectrighttop == "Holy" then
+  AddRightTopGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_holy")
 elseif C.Gryphons.selectrighttop == "Unholy" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size2+156)
-fr:SetHeight(size2+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadow_unholy")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_unholy")
 elseif C.Gryphons.selectrighttop == "Simple" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size2+156)
-fr:SetHeight(size2+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadowcombat")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadowcombat")  
 elseif C.Gryphons.selectrighttop == "Water" then
-c,v,b,n = GetStringColor(C.Gryphons.right_color)
-size2 = C.Gryphons.img_size2
-hoff2 = C.Gryphons.h_off2
-voff2 = C.Gryphons.v_off2
-fr = CreateFrame("Frame",nil,pfActionBarTop)
-fr:SetFrameStrata("BACKGROUND")
-fr:SetWidth(size2+156)
-fr:SetHeight(size2+28)
-tr = fr:CreateTexture(nil,"BACKGROUND")
-tr:SetTexture("Interface\\AddOns\\pfUI-gryphons\\rightshadowswim")
-tr:SetVertexColor(c,v,b,n)
-tr:SetAllPoints(fr)
-fr.texture = tr
-fr:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
-fr:Show()
-fr:SetParent(pfActionBarTop)
-
+  AddRightTopGriphonExtended("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadowswim")
 end
 
     end)
