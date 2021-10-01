@@ -392,7 +392,7 @@ elseif C.Gryphons.selectrighttop == "Diablo4" then
 elseif C.Gryphons.selectrighttop == "Turtle1" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle11")
 elseif C.Gryphons.selectrighttop == "Turtle2" then
-  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle22")
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle2")
 elseif C.Gryphons.selectrighttop == "Gargoyle1" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle11")
 elseif C.Gryphons.selectrighttop == "Gargoyle2" then
