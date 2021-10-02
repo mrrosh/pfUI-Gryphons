@@ -246,7 +246,7 @@ end
 ----------------
 
 
-local function AddRightGriphon(texture)
+local function AddRightGriphon(texture, extended)
   local r1,g1,b1,a1 = GetStringColor(C.Gryphons.right_color)
   local hoff1 = C.Gryphons.h_off1
   local voff1 = C.Gryphons.v_off1
@@ -338,7 +338,7 @@ end
 -- Right side top --
 ----------------
 
-local function AddRightTopGriphon(texture)
+local function AddRightTopGriphon(texture, extended)
   local r2,g2,b2,a2 = GetStringColor(C.Gryphons.righttop_color)
   local hoff2 = C.Gryphons.h_off2
   local voff2 = C.Gryphons.v_off2
