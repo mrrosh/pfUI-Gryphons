@@ -3,6 +3,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Default:" .. T["Default"],
   "None:" .. T["None"],
   "Lion:" .. T["Lion"],
+  "Lion2:" .. T["Winged Lion"],
+  "Lion3:" .. T["Golden Winged Lion"],
   "Shagu:" .. T["Shagu"],
   "Diablo1:" .. T["Diablo1"],
   "Diablo2:" .. T["Diablo2"],
@@ -32,6 +34,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Default:" .. T["Default"],
   "None:" .. T["None"],
   "Lion:" .. T["Lion"],
+  "Lion2:" .. T["Winged Lion"],
+  "Lion3:" .. T["Golden Winged Lion"],
   "Shagu:" .. T["Shagu"],
   "Diablo1:" .. T["Diablo1"],
   "Diablo2:" .. T["Diablo2"],
@@ -61,6 +65,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Default:" .. T["Default"],
   "None:" .. T["None"],
   "Lion:" .. T["Lion"],
+  "Lion2:" .. T["Winged Lion"],
+  "Lion3:" .. T["Golden Winged Lion"],
   "Shagu:" .. T["Shagu"],
   "Diablo1:" .. T["Diablo1"],
   "Diablo2:" .. T["Diablo2"],
@@ -193,6 +199,10 @@ elseif C.Gryphons.selectleft == "None" then
   AddLeftGriphon(nil)
 elseif C.Gryphons.selectleft == "Lion" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion")
+elseif C.Gryphons.selectleft == "Lion2" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion2")
+elseif C.Gryphons.selectleft == "Lion3" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion3")
 elseif C.Gryphons.selectleft == "Shagu" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\shagu")
 elseif C.Gryphons.selectleft == "Diablo1" then
@@ -285,6 +295,10 @@ elseif C.Gryphons.selectright == "None" then
   AddRightGriphon(nil)
 elseif C.Gryphons.selectright == "Lion" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion1")
+elseif C.Gryphons.selectright == "Lion2" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion22")
+elseif C.Gryphons.selectright == "Lion3" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion33")
 elseif C.Gryphons.selectright == "Shagu" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\shagu1")
 elseif C.Gryphons.selectright == "Diablo1" then
@@ -379,6 +393,10 @@ elseif C.Gryphons.selectrighttop == "None" then
   AddRightTopGriphon(nil)
 elseif C.Gryphons.selectrighttop == "Lion" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion1")
+elseif C.Gryphons.selectrighttop == "Lion2" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion22")
+elseif C.Gryphons.selectrighttop == "Lion3" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion33")
 elseif C.Gryphons.selectrighttop == "Shagu" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\shagu1")
 elseif C.Gryphons.selectrighttop == "Diablo1" then
