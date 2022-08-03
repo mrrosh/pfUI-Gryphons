@@ -2,6 +2,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   pfUI.gui.dropdowns.Gryphons_selectleft = {
   "Default:" .. T["Default"],
   "None:" .. T["None"],
+  "Skull:" .. T["Skull"],
+  "Skull2:" .. T["Golden Skull"],
   "Lion:" .. T["Lion"],
   "Lion2:" .. T["Winged Lion"],
   "Lion3:" .. T["Golden Winged Lion"],
@@ -33,6 +35,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   pfUI.gui.dropdowns.Gryphons_selectright = {
   "Default:" .. T["Default"],
   "None:" .. T["None"],
+  "Skull:" .. T["Skull"],
+  "Skull2:" .. T["Golden Skull"],
   "Lion:" .. T["Lion"],
   "Lion2:" .. T["Winged Lion"],
   "Lion3:" .. T["Golden Winged Lion"],
@@ -64,6 +68,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   pfUI.gui.dropdowns.Gryphons_selectrighttop = {
   "Default:" .. T["Default"],
   "None:" .. T["None"],
+  "Skull:" .. T["Skull"],
+  "Skull2:" .. T["Golden Skull"],
   "Lion:" .. T["Lion"],
   "Lion2:" .. T["Winged Lion"],
   "Lion3:" .. T["Golden Winged Lion"],
@@ -197,6 +203,10 @@ if C.Gryphons.selectleft == "Default" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\griffon")
 elseif C.Gryphons.selectleft == "None" then
   AddLeftGriphon(nil)
+elseif C.Gryphons.selectleft == "Skull" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skull")
+elseif C.Gryphons.selectleft == "Skull2" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skullg")
 elseif C.Gryphons.selectleft == "Lion" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion")
 elseif C.Gryphons.selectleft == "Lion2" then
@@ -293,6 +303,10 @@ if C.Gryphons.selectright == "Default" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\griffon1")
 elseif C.Gryphons.selectright == "None" then
   AddRightGriphon(nil)
+elseif C.Gryphons.selectright == "Skull" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skull1")
+elseif C.Gryphons.selectright == "Skull2" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skullg1")
 elseif C.Gryphons.selectright == "Lion" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion1")
 elseif C.Gryphons.selectright == "Lion2" then
@@ -391,6 +405,10 @@ if C.Gryphons.selectrighttop == "Default" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\griffon1")
 elseif C.Gryphons.selectrighttop == "None" then
   AddRightTopGriphon(nil)
+elseif C.Gryphons.selectrighttop == "Skull" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skull1")
+elseif C.Gryphons.selectrighttop == "Skull2" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skullg1")
 elseif C.Gryphons.selectrighttop == "Lion" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion1")
 elseif C.Gryphons.selectrighttop == "Lion2" then
