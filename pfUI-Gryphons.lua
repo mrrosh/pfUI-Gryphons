@@ -65,6 +65,39 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Water:" .. T["Water"]
   }
   
+  pfUI.gui.dropdowns.Gryphons_selectlefttop = {
+  "Default:" .. T["Default"],
+  "None:" .. T["None"],
+  "Skull:" .. T["Skull"],
+  "Skull2:" .. T["Golden Skull"],
+  "Lion:" .. T["Lion"],
+  "Lion2:" .. T["Winged Lion"],
+  "Lion3:" .. T["Golden Winged Lion"],
+  "Shagu:" .. T["Shagu"],
+  "Diablo1:" .. T["Diablo1"],
+  "Diablo2:" .. T["Diablo2"],
+  "Diablo3:" .. T["Diablo3"],
+  "Diablo4:" .. T["Diablo4"],
+  "Turtle:" .. T["Turtle"],
+  "Turtle2:" .. T["Golden Turtle"],
+  "Gargoyle1:" .. T["Gargoyle"],
+  "Gargoyle2:" .. T["Gargoyle2"],
+  "Onyxia:" .. T["Onyxia"],
+  "Murloc1:" .. T["Murloc1"],
+  "Murloc2:" .. T["Murloc2"],
+  "Bear:" .. T["Bear"],
+  "Cat:" .. T["Cat"],
+  "Dead:" .. T["Dead"],
+  "Frost:" .. T["Frost"],
+  "Metamorph:" .. T["Metamorph"],
+  "Fire:" .. T["Fire"],
+  "Storm:" .. T["Storm"],
+  "Holy:" .. T["Holy"],
+  "Unholy:" .. T["Unholy"],
+  "Simple:" .. T["Simple"],
+  "Water:" .. T["Water"]
+  }
+  
   pfUI.gui.dropdowns.Gryphons_selectrighttop = {
   "Default:" .. T["Default"],
   "None:" .. T["None"],
@@ -126,11 +159,18 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   pfUI.gui.CreateConfig(nil, T["Vertical Offset"], C.Gryphons, "v_off1")
   pfUI.gui.CreateConfig(nil, T["Pick Color"], C.Gryphons, "right_color", "color")
   
+  pfUI.gui.CreateConfig(nil, T["Left side top"], nil, nil, "header")
+  pfUI.gui.CreateConfig(nil, T["Select left gryphon"], C.Gryphons, "selectlefttop", "dropdown", pfUI.gui.dropdowns.Gryphons_selectlefttop)
+  pfUI.gui.CreateConfig(nil, T["Size"], C.Gryphons, "img_sizelt")
+  pfUI.gui.CreateConfig(nil, T["Horizontal Offset"], C.Gryphons, "h_offlt")
+  pfUI.gui.CreateConfig(nil, T["Vertical Offset"], C.Gryphons, "v_offlt")
+  pfUI.gui.CreateConfig(nil, T["Pick Color"], C.Gryphons, "lefttop_color", "color")
+  
   pfUI.gui.CreateConfig(nil, T["Right side top"], nil, nil, "header")
   pfUI.gui.CreateConfig(nil, T["Select right gryphon"], C.Gryphons, "selectrighttop", "dropdown", pfUI.gui.dropdowns.Gryphons_selectrighttop)
-  pfUI.gui.CreateConfig(nil, T["Size"], C.Gryphons, "img_size2")
-  pfUI.gui.CreateConfig(nil, T["Horizontal Offset"], C.Gryphons, "h_off2")
-  pfUI.gui.CreateConfig(nil, T["Vertical Offset"], C.Gryphons, "v_off2")
+  pfUI.gui.CreateConfig(nil, T["Size"], C.Gryphons, "img_sizert")
+  pfUI.gui.CreateConfig(nil, T["Horizontal Offset"], C.Gryphons, "h_offrt")
+  pfUI.gui.CreateConfig(nil, T["Vertical Offset"], C.Gryphons, "v_offrt")
   pfUI.gui.CreateConfig(nil, T["Pick Color"], C.Gryphons, "righttop_color", "color")
    
   end)
@@ -147,6 +187,7 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   pfUI:UpdateConfig("Gryphons",       nil,         "header")
   pfUI:UpdateConfig("Gryphons",       nil,         "selectleft",   "Turtle")
   pfUI:UpdateConfig("Gryphons",       nil,         "selectright",   "Turtle")
+  pfUI:UpdateConfig("Gryphons",       nil,         "selectlefttop",   "None")
   pfUI:UpdateConfig("Gryphons",       nil,         "selectrighttop",   "None")
   pfUI:UpdateConfig("Gryphons",       nil,         "img_size",   "100")
   pfUI:UpdateConfig("Gryphons",       nil,         "h_off",   "-80")
@@ -154,11 +195,15 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   pfUI:UpdateConfig("Gryphons",       nil,         "img_size1",   "100")
   pfUI:UpdateConfig("Gryphons",       nil,         "h_off1",   "80")
   pfUI:UpdateConfig("Gryphons",       nil,         "v_off1",   "-5")
-  pfUI:UpdateConfig("Gryphons",       nil,         "img_size2",   "100")
-  pfUI:UpdateConfig("Gryphons",       nil,         "h_off2",   "80")
-  pfUI:UpdateConfig("Gryphons",       nil,         "v_off2",   "-5")
+  pfUI:UpdateConfig("Gryphons",       nil,         "img_sizelt",   "100")
+  pfUI:UpdateConfig("Gryphons",       nil,         "h_offlt",   "-80")
+  pfUI:UpdateConfig("Gryphons",       nil,         "v_offlt",   "-5")
+  pfUI:UpdateConfig("Gryphons",       nil,         "img_sizert",   "100")
+  pfUI:UpdateConfig("Gryphons",       nil,         "h_offrt",   "80")
+  pfUI:UpdateConfig("Gryphons",       nil,         "v_offrt",   "-5")
   pfUI:UpdateConfig("Gryphons",       nil,         "left_color",   "1,1,1")
   pfUI:UpdateConfig("Gryphons",       nil,         "right_color",   "1,1,1")
+  pfUI:UpdateConfig("Gryphons",       nil,         "lefttop_color",   "1,1,1")
   pfUI:UpdateConfig("Gryphons",       nil,         "righttop_color",   "1,1,1")
 
 ----------------
@@ -361,16 +406,116 @@ elseif C.Gryphons.selectright == "Water" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadowswim", true)
 end
 
+----------------
+-- Left side top --
+----------------
+
+local function AddLeftTopGriphon(texture, extended)
+  local r2,g2,b2,a2 = GetStringColor(C.Gryphons.lefttop_color)
+  local hoff2 = C.Gryphons.h_offlt
+  local voff2 = C.Gryphons.v_offlt
+  local size2 = C.Gryphons.img_sizelt
+  local strata = extended and "BACKGROUND" or "HIGH"
+
+  -- create griphon frame
+  local flt = CreateFrame("Frame",nil,pfActionBarTop)
+  flt:SetFrameStrata(strata)
+
+  -- create griphon texture
+  local tlt = flt:CreateTexture(nil,strata)
+  tlt:SetTexture(texture)
+  tlt:SetVertexColor(r2,g2,b2,a2)
+  tlt:SetAllPoints(flt)
+  flt:Show()
+  flt:SetParent(pfActionBarTop)
+  flt.texture = tlt
+  
+  if extended then
+    flt:SetWidth(size2+156)
+    flt:SetHeight(size2+28)
+    flt:SetPoint("BOTTOMLEFT", pfActionBarTop,"BOTTOMLEFT", hoff2-175,voff2)
+  else
+    flt:SetWidth(size2)
+    flt:SetHeight(size2)
+    flt:SetPoint("BOTTOMLEFT", pfActionBarTop,"BOTTOMLEFT", hoff2,voff2)
+  end
+  
+  return flt
+end
+
+
+
+if C.Gryphons.selectlefttop == "Default" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\griffon")
+elseif C.Gryphons.selectlefttop == "None" then
+  AddLeftTopGriphon(nil)
+elseif C.Gryphons.selectlefttop == "Skull" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skull")
+elseif C.Gryphons.selectlefttop == "Skull2" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skullg")
+elseif C.Gryphons.selectlefttop == "Lion" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion")
+elseif C.Gryphons.selectlefttop == "Lion2" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion2")
+elseif C.Gryphons.selectlefttop == "Lion3" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion3")
+elseif C.Gryphons.selectlefttop == "Shagu" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\shagu")
+elseif C.Gryphons.selectlefttop == "Diablo1" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo1")
+elseif C.Gryphons.selectlefttop == "Diablo2" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo2")
+elseif C.Gryphons.selectlefttop == "Diablo3" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo3")
+elseif C.Gryphons.selectlefttop == "Diablo4" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo4")
+elseif C.Gryphons.selectlefttop == "Turtle" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle")
+elseif C.Gryphons.selectlefttop == "Turtle2" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtleg")
+elseif C.Gryphons.selectlefttop == "Gargoyle1" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle1")
+elseif C.Gryphons.selectlefttop == "Gargoyle2" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle2")
+elseif C.Gryphons.selectlefttop == "Onyxia" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\onyxia")
+elseif C.Gryphons.selectlefttop == "Murloc1" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc1")
+elseif C.Gryphons.selectlefttop == "Murloc2" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc2")
+elseif C.Gryphons.selectlefttop == "Bear" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_bear", true)
+elseif C.Gryphons.selectlefttop == "Cat" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_cat", true)
+elseif C.Gryphons.selectlefttop == "Dead" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_dead", true)
+elseif C.Gryphons.selectlefttop == "Frost" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_frost", true)
+elseif C.Gryphons.selectlefttop == "Metamorph" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_metamorph", true)
+elseif C.Gryphons.selectlefttop == "Fire" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_shaman_fire", true)
+elseif C.Gryphons.selectlefttop == "Storm" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_shaman_storm", true)
+elseif C.Gryphons.selectlefttop == "Holy" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_holy", true)
+elseif C.Gryphons.selectlefttop == "Unholy" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_unholy", true)
+elseif C.Gryphons.selectlefttop == "Simple" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadowcombat", true)  
+elseif C.Gryphons.selectlefttop == "Water" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadowswim", true)
+end
 
 ----------------
 -- Right side top --
 ----------------
 
 local function AddRightTopGriphon(texture, extended)
-  local r2,g2,b2,a2 = GetStringColor(C.Gryphons.righttop_color)
-  local hoff2 = C.Gryphons.h_off2
-  local voff2 = C.Gryphons.v_off2
-  local size2 = C.Gryphons.img_size2
+  local r3,g3,b3,a3 = GetStringColor(C.Gryphons.righttop_color)
+  local hoff3 = C.Gryphons.h_offrt
+  local voff3 = C.Gryphons.v_offrt
+  local size3 = C.Gryphons.img_sizert
   local strata = extended and "BACKGROUND" or "HIGH"
 
   -- create griphon frame
@@ -380,20 +525,20 @@ local function AddRightTopGriphon(texture, extended)
   -- create griphon texture
   local trt = frt:CreateTexture(nil,strata)
   trt:SetTexture(texture)
-  trt:SetVertexColor(r2,g2,b2,a2)
+  trt:SetVertexColor(r3,g3,b3,a3)
   trt:SetAllPoints(frt)
   frt:Show()
   frt:SetParent(pfActionBarTop)
   frt.texture = trt
   
   if extended then
-    frt:SetWidth(size1+156)
-    frt:SetHeight(size1+28)
-    frt:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2+175,voff2)
+    frt:SetWidth(size3+156)
+    frt:SetHeight(size3+28)
+    frt:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff3+175,voff3)
   else
-    frt:SetWidth(size2)
-    frt:SetHeight(size2)
-    frt:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff2,voff2)
+    frt:SetWidth(size3)
+    frt:SetHeight(size3)
+    frt:SetPoint("BOTTOMRIGHT", pfActionBarTop,"BOTTOMRIGHT", hoff3,voff3)
   end
   
   return frt
