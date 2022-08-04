@@ -12,3 +12,5 @@
 3. Rename the folder "pfUI-Gryphons-master" to "pfUI-Gryphons"
 4. Copy "pfUI-Gryphons" into Wow-Directory\Interface\AddOns
 5. Restart Wow
+
+## Credit for the turtle artwork goes to Illdrawer#5820 on Discord.
