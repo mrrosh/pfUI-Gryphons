@@ -12,8 +12,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Diablo2:" .. T["Diablo2"],
   "Diablo3:" .. T["Diablo3"],
   "Diablo4:" .. T["Diablo4"],
-  "Turtle1:" .. T["Turtle1"],
-  "Turtle2:" .. T["Turtle2"],
+  "Turtle:" .. T["Turtle"],
+  "Turtle2:" .. T["Golden Turtle"],
   "Gargoyle1:" .. T["Gargoyle"],
   "Gargoyle2:" .. T["Gargoyle2"],
   "Onyxia:" .. T["Onyxia"],
@@ -45,8 +45,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Diablo2:" .. T["Diablo2"],
   "Diablo3:" .. T["Diablo3"],
   "Diablo4:" .. T["Diablo4"],
-  "Turtle1:" .. T["Turtle1"],
-  "Turtle2:" .. T["Turtle2"],
+  "Turtle:" .. T["Turtle"],
+  "Turtle2:" .. T["Golden Turtle"],
   "Gargoyle1:" .. T["Gargoyle"],
   "Gargoyle2:" .. T["Gargoyle2"],
   "Onyxia:" .. T["Onyxia"],
@@ -78,8 +78,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Diablo2:" .. T["Diablo2"],
   "Diablo3:" .. T["Diablo3"],
   "Diablo4:" .. T["Diablo4"],
-  "Turtle1:" .. T["Turtle1"],
-  "Turtle2:" .. T["Turtle2"],
+  "Turtle:" .. T["Turtle"],
+  "Turtle2:" .. T["Golden Turtle"],
   "Gargoyle1:" .. T["Gargoyle"],
   "Gargoyle2:" .. T["Gargoyle2"],
   "Onyxia:" .. T["Onyxia"],
@@ -145,18 +145,18 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   end)
   end
   pfUI:UpdateConfig("Gryphons",       nil,         "header")
-  pfUI:UpdateConfig("Gryphons",       nil,         "selectleft",   "Default")
-  pfUI:UpdateConfig("Gryphons",       nil,         "selectright",   "Default")
+  pfUI:UpdateConfig("Gryphons",       nil,         "selectleft",   "Turtle")
+  pfUI:UpdateConfig("Gryphons",       nil,         "selectright",   "Turtle")
   pfUI:UpdateConfig("Gryphons",       nil,         "selectrighttop",   "None")
   pfUI:UpdateConfig("Gryphons",       nil,         "img_size",   "100")
-  pfUI:UpdateConfig("Gryphons",       nil,         "h_off",   "-75")
-  pfUI:UpdateConfig("Gryphons",       nil,         "v_off",   "-1")
+  pfUI:UpdateConfig("Gryphons",       nil,         "h_off",   "-80")
+  pfUI:UpdateConfig("Gryphons",       nil,         "v_off",   "-5")
   pfUI:UpdateConfig("Gryphons",       nil,         "img_size1",   "100")
-  pfUI:UpdateConfig("Gryphons",       nil,         "h_off1",   "75")
-  pfUI:UpdateConfig("Gryphons",       nil,         "v_off1",   "-1")
+  pfUI:UpdateConfig("Gryphons",       nil,         "h_off1",   "80")
+  pfUI:UpdateConfig("Gryphons",       nil,         "v_off1",   "-5")
   pfUI:UpdateConfig("Gryphons",       nil,         "img_size2",   "100")
-  pfUI:UpdateConfig("Gryphons",       nil,         "h_off2",   "75")
-  pfUI:UpdateConfig("Gryphons",       nil,         "v_off2",   "-1")
+  pfUI:UpdateConfig("Gryphons",       nil,         "h_off2",   "80")
+  pfUI:UpdateConfig("Gryphons",       nil,         "v_off2",   "-5")
   pfUI:UpdateConfig("Gryphons",       nil,         "left_color",   "1,1,1")
   pfUI:UpdateConfig("Gryphons",       nil,         "right_color",   "1,1,1")
   pfUI:UpdateConfig("Gryphons",       nil,         "righttop_color",   "1,1,1")
@@ -223,10 +223,10 @@ elseif C.Gryphons.selectleft == "Diablo3" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo3")
 elseif C.Gryphons.selectleft == "Diablo4" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo4")
-elseif C.Gryphons.selectleft == "Turtle1" then
-  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle1")
+elseif C.Gryphons.selectleft == "Turtle" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle")
 elseif C.Gryphons.selectleft == "Turtle2" then
-  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle22")
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtleg")
 elseif C.Gryphons.selectleft == "Gargoyle1" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle1")
 elseif C.Gryphons.selectleft == "Gargoyle2" then
@@ -323,10 +323,10 @@ elseif C.Gryphons.selectright == "Diablo3" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo33")
 elseif C.Gryphons.selectright == "Diablo4" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo44")
-elseif C.Gryphons.selectright == "Turtle1" then
-  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle11")
+elseif C.Gryphons.selectright == "Turtle" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle1")
 elseif C.Gryphons.selectright == "Turtle2" then
-  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle2")
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtleg1")
 elseif C.Gryphons.selectright == "Gargoyle1" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle11")
 elseif C.Gryphons.selectright == "Gargoyle2" then
@@ -425,10 +425,10 @@ elseif C.Gryphons.selectrighttop == "Diablo3" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo33")
 elseif C.Gryphons.selectrighttop == "Diablo4" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\diablo44")
-elseif C.Gryphons.selectrighttop == "Turtle1" then
-  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle11")
+elseif C.Gryphons.selectrighttop == "Turtle" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle1")
 elseif C.Gryphons.selectrighttop == "Turtle2" then
-  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtle2")
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\turtleg1")
 elseif C.Gryphons.selectrighttop == "Gargoyle1" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle11")
 elseif C.Gryphons.selectrighttop == "Gargoyle2" then
