@@ -1,24 +1,23 @@
 pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   pfUI.gui.dropdowns.Gryphons_selectleft = {
-  "Default:" .. T["Default"],
   "None:" .. T["None"],
-  "Skull:" .. T["Skull"],
-  "Skull2:" .. T["Golden Skull"],
+  "Default:" .. T["Default"],
+  "GryphonHD1:" .. T["GryphonHD"],
+  "GryphonHD2:" .. T["GryphonHD Gold"],
   "Lion:" .. T["Lion"],
   "Lion2:" .. T["Winged Lion"],
   "Lion3:" .. T["Golden Winged Lion"],
-  "Shagu:" .. T["Shagu"],
+  "Turtle:" .. T["Turtle"],
+  "Turtle2:" .. T["Golden Turtle"],
+  "Skull:" .. T["Skull"],
+  "Skull2:" .. T["Golden Skull"],
   "Diablo1:" .. T["Diablo1"],
   "Diablo2:" .. T["Diablo2"],
   "Diablo3:" .. T["Diablo3"],
   "Diablo4:" .. T["Diablo4"],
-  "Turtle:" .. T["Turtle"],
-  "Turtle2:" .. T["Golden Turtle"],
   "Gargoyle1:" .. T["Gargoyle"],
   "Gargoyle2:" .. T["Gargoyle2"],
   "Onyxia:" .. T["Onyxia"],
-  "Murloc1:" .. T["Murloc1"],
-  "Murloc2:" .. T["Murloc2"],
   "Bear:" .. T["Bear"],
   "Cat:" .. T["Cat"],
   "Dead:" .. T["Dead"],
@@ -33,25 +32,24 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   }
   
   pfUI.gui.dropdowns.Gryphons_selectright = {
-  "Default:" .. T["Default"],
   "None:" .. T["None"],
-  "Skull:" .. T["Skull"],
-  "Skull2:" .. T["Golden Skull"],
+  "Default:" .. T["Default"],
+  "GryphonHD1:" .. T["GryphonHD"],
+  "GryphonHD2:" .. T["GryphonHD Gold"],
   "Lion:" .. T["Lion"],
   "Lion2:" .. T["Winged Lion"],
   "Lion3:" .. T["Golden Winged Lion"],
-  "Shagu:" .. T["Shagu"],
+  "Turtle:" .. T["Turtle"],
+  "Turtle2:" .. T["Golden Turtle"],
+  "Skull:" .. T["Skull"],
+  "Skull2:" .. T["Golden Skull"],
   "Diablo1:" .. T["Diablo1"],
   "Diablo2:" .. T["Diablo2"],
   "Diablo3:" .. T["Diablo3"],
   "Diablo4:" .. T["Diablo4"],
-  "Turtle:" .. T["Turtle"],
-  "Turtle2:" .. T["Golden Turtle"],
   "Gargoyle1:" .. T["Gargoyle"],
   "Gargoyle2:" .. T["Gargoyle2"],
   "Onyxia:" .. T["Onyxia"],
-  "Murloc1:" .. T["Murloc1"],
-  "Murloc2:" .. T["Murloc2"],
   "Bear:" .. T["Bear"],
   "Cat:" .. T["Cat"],
   "Dead:" .. T["Dead"],
@@ -66,25 +64,24 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   }
   
   pfUI.gui.dropdowns.Gryphons_selectlefttop = {
-  "Default:" .. T["Default"],
   "None:" .. T["None"],
-  "Skull:" .. T["Skull"],
-  "Skull2:" .. T["Golden Skull"],
+  "Default:" .. T["Default"],
+  "GryphonHD1:" .. T["GryphonHD"],
+  "GryphonHD2:" .. T["GryphonHD Gold"],
   "Lion:" .. T["Lion"],
   "Lion2:" .. T["Winged Lion"],
   "Lion3:" .. T["Golden Winged Lion"],
-  "Shagu:" .. T["Shagu"],
+  "Turtle:" .. T["Turtle"],
+  "Turtle2:" .. T["Golden Turtle"],
+  "Skull:" .. T["Skull"],
+  "Skull2:" .. T["Golden Skull"],
   "Diablo1:" .. T["Diablo1"],
   "Diablo2:" .. T["Diablo2"],
   "Diablo3:" .. T["Diablo3"],
   "Diablo4:" .. T["Diablo4"],
-  "Turtle:" .. T["Turtle"],
-  "Turtle2:" .. T["Golden Turtle"],
   "Gargoyle1:" .. T["Gargoyle"],
   "Gargoyle2:" .. T["Gargoyle2"],
   "Onyxia:" .. T["Onyxia"],
-  "Murloc1:" .. T["Murloc1"],
-  "Murloc2:" .. T["Murloc2"],
   "Bear:" .. T["Bear"],
   "Cat:" .. T["Cat"],
   "Dead:" .. T["Dead"],
@@ -99,25 +96,24 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   }
   
   pfUI.gui.dropdowns.Gryphons_selectrighttop = {
-  "Default:" .. T["Default"],
   "None:" .. T["None"],
-  "Skull:" .. T["Skull"],
-  "Skull2:" .. T["Golden Skull"],
+  "Default:" .. T["Default"],
+  "GryphonHD1:" .. T["GryphonHD"],
+  "GryphonHD2:" .. T["GryphonHD Gold"],
   "Lion:" .. T["Lion"],
   "Lion2:" .. T["Winged Lion"],
   "Lion3:" .. T["Golden Winged Lion"],
-  "Shagu:" .. T["Shagu"],
+  "Turtle:" .. T["Turtle"],
+  "Turtle2:" .. T["Golden Turtle"],
+  "Skull:" .. T["Skull"],
+  "Skull2:" .. T["Golden Skull"],
   "Diablo1:" .. T["Diablo1"],
   "Diablo2:" .. T["Diablo2"],
   "Diablo3:" .. T["Diablo3"],
   "Diablo4:" .. T["Diablo4"],
-  "Turtle:" .. T["Turtle"],
-  "Turtle2:" .. T["Golden Turtle"],
   "Gargoyle1:" .. T["Gargoyle"],
   "Gargoyle2:" .. T["Gargoyle2"],
   "Onyxia:" .. T["Onyxia"],
-  "Murloc1:" .. T["Murloc1"],
-  "Murloc2:" .. T["Murloc2"],
   "Bear:" .. T["Bear"],
   "Cat:" .. T["Cat"],
   "Dead:" .. T["Dead"],
@@ -278,10 +274,10 @@ elseif C.Gryphons.selectleft == "Gargoyle2" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle2")
 elseif C.Gryphons.selectleft == "Onyxia" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\onyxia")
-elseif C.Gryphons.selectleft == "Murloc1" then
-  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc1")
-elseif C.Gryphons.selectleft == "Murloc2" then
-  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc2")
+elseif C.Gryphons.selectleft == "GryphonHD1" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD")
+elseif C.Gryphons.selectleft == "GryphonHD2" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHDG")
 elseif C.Gryphons.selectleft == "Bear" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_bear", true)
 elseif C.Gryphons.selectleft == "Cat" then
@@ -378,10 +374,10 @@ elseif C.Gryphons.selectright == "Gargoyle2" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle22")
 elseif C.Gryphons.selectright == "Onyxia" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\onyxia1")
-elseif C.Gryphons.selectright == "Murloc1" then
-  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc11")
-elseif C.Gryphons.selectright == "Murloc2" then
-  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc22")
+elseif C.Gryphons.selectright == "GryphonHD1" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD1")
+elseif C.Gryphons.selectright == "GryphonHD2" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHDG1")
 elseif C.Gryphons.selectright == "Bear" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_bear", true)
 elseif C.Gryphons.selectright == "Cat" then
@@ -479,10 +475,10 @@ elseif C.Gryphons.selectlefttop == "Gargoyle2" then
   AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle2")
 elseif C.Gryphons.selectlefttop == "Onyxia" then
   AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\onyxia")
-elseif C.Gryphons.selectlefttop == "Murloc1" then
-  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc1")
-elseif C.Gryphons.selectlefttop == "Murloc2" then
-  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc2")
+elseif C.Gryphons.selectlefttop == "GryphonHD1" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD")
+elseif C.Gryphons.selectlefttop == "GryphonHD2" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHDG")
 elseif C.Gryphons.selectlefttop == "Bear" then
   AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_bear", true)
 elseif C.Gryphons.selectlefttop == "Cat" then
@@ -580,10 +576,10 @@ elseif C.Gryphons.selectrighttop == "Gargoyle2" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\gargoyle22")
 elseif C.Gryphons.selectrighttop == "Onyxia" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\onyxia1")
-elseif C.Gryphons.selectrighttop == "Murloc1" then
-  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc11")
-elseif C.Gryphons.selectrighttop == "Murloc2" then
-  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\murloc22")
+elseif C.Gryphons.selectrighttop == "GryphonHD1" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD1")
+elseif C.Gryphons.selectrighttop == "GryphonHD2" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHDG1")
 elseif C.Gryphons.selectrighttop == "Bear" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_bear", true)
 elseif C.Gryphons.selectrighttop == "Cat" then
