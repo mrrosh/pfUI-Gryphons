@@ -4,6 +4,10 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Default:" .. T["Default"],
   "GryphonHD1:" .. T["GryphonHD"],
   "GryphonHD2:" .. T["GryphonHD Gold"],
+  "GryphonHD3:" .. T["GryphonHD-Alliance"],
+  "GryphonHD4:" .. T["GryphonHD-Horde"],
+  "GryphonHD5:" .. T["GryphonHD-A-Gold"],
+  "GryphonHD6:" .. T["GryphonHD-H-Gold"],
   "Lion:" .. T["Lion"],
   "Lion2:" .. T["Winged Lion"],
   "Lion3:" .. T["Golden Winged Lion"],
@@ -36,6 +40,10 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Default:" .. T["Default"],
   "GryphonHD1:" .. T["GryphonHD"],
   "GryphonHD2:" .. T["GryphonHD Gold"],
+  "GryphonHD3:" .. T["GryphonHD-Alliance"],
+  "GryphonHD4:" .. T["GryphonHD-Horde"],
+  "GryphonHD5:" .. T["GryphonHD-A-Gold"],
+  "GryphonHD6:" .. T["GryphonHD-H-Gold"],
   "Lion:" .. T["Lion"],
   "Lion2:" .. T["Winged Lion"],
   "Lion3:" .. T["Golden Winged Lion"],
@@ -68,6 +76,10 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Default:" .. T["Default"],
   "GryphonHD1:" .. T["GryphonHD"],
   "GryphonHD2:" .. T["GryphonHD Gold"],
+  "GryphonHD3:" .. T["GryphonHD-Alliance"],
+  "GryphonHD4:" .. T["GryphonHD-Horde"],
+  "GryphonHD5:" .. T["GryphonHD-A-Gold"],
+  "GryphonHD6:" .. T["GryphonHD-H-Gold"],
   "Lion:" .. T["Lion"],
   "Lion2:" .. T["Winged Lion"],
   "Lion3:" .. T["Golden Winged Lion"],
@@ -100,6 +112,10 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Default:" .. T["Default"],
   "GryphonHD1:" .. T["GryphonHD"],
   "GryphonHD2:" .. T["GryphonHD Gold"],
+  "GryphonHD3:" .. T["GryphonHD-Alliance"],
+  "GryphonHD4:" .. T["GryphonHD-Horde"],
+  "GryphonHD5:" .. T["GryphonHD-A-Gold"],
+  "GryphonHD6:" .. T["GryphonHD-H-Gold"],
   "Lion:" .. T["Lion"],
   "Lion2:" .. T["Winged Lion"],
   "Lion3:" .. T["Golden Winged Lion"],
@@ -278,6 +294,14 @@ elseif C.Gryphons.selectleft == "GryphonHD1" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD")
 elseif C.Gryphons.selectleft == "GryphonHD2" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHDG")
+elseif C.Gryphons.selectleft == "GryphonHD3" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD2Left")
+elseif C.Gryphons.selectleft == "GryphonHD4" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD3Left")
+elseif C.Gryphons.selectleft == "GryphonHD5" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD2LeftGold")
+elseif C.Gryphons.selectleft == "GryphonHD6" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD3LeftGold")
 elseif C.Gryphons.selectleft == "Bear" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_bear", true)
 elseif C.Gryphons.selectleft == "Cat" then
@@ -378,6 +402,14 @@ elseif C.Gryphons.selectright == "GryphonHD1" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD1")
 elseif C.Gryphons.selectright == "GryphonHD2" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHDG1")
+elseif C.Gryphons.selectright == "GryphonHD3" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD2Right")
+elseif C.Gryphons.selectright == "GryphonHD4" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD3Right")
+elseif C.Gryphons.selectright == "GryphonHD5" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD2RightGold")
+elseif C.Gryphons.selectright == "GryphonHD6" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD3RightGold")
 elseif C.Gryphons.selectright == "Bear" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_bear", true)
 elseif C.Gryphons.selectright == "Cat" then
@@ -479,6 +511,14 @@ elseif C.Gryphons.selectlefttop == "GryphonHD1" then
   AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD")
 elseif C.Gryphons.selectlefttop == "GryphonHD2" then
   AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHDG")
+elseif C.Gryphons.selectlefttop == "GryphonHD3" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD2Left")
+elseif C.Gryphons.selectlefttop == "GryphonHD4" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD3Left")
+elseif C.Gryphons.selectlefttop == "GryphonHD5" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD2LeftGold")
+elseif C.Gryphons.selectlefttop == "GryphonHD6" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD3LeftGold")
 elseif C.Gryphons.selectlefttop == "Bear" then
   AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\leftshadow_bear", true)
 elseif C.Gryphons.selectlefttop == "Cat" then
@@ -580,6 +620,14 @@ elseif C.Gryphons.selectrighttop == "GryphonHD1" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD1")
 elseif C.Gryphons.selectrighttop == "GryphonHD2" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHDG1")
+elseif C.Gryphons.selectrighttop == "GryphonHD3" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD2Right")
+elseif C.Gryphons.selectrighttop == "GryphonHD4" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD3Right")
+elseif C.Gryphons.selectrighttop == "GryphonHD5" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD2RightGold")
+elseif C.Gryphons.selectrighttop == "GryphonHD6" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\GryphonHD3RightGold")
 elseif C.Gryphons.selectrighttop == "Bear" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\rightshadow_bear", true)
 elseif C.Gryphons.selectrighttop == "Cat" then
