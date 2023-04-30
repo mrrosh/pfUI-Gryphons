@@ -15,6 +15,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Turtle2:" .. T["Golden Turtle"],
   "Skull:" .. T["Skull"],
   "Skull2:" .. T["Golden Skull"],
+  "Skull3:" .. T["Skull2"],
+  "Leaf:" .. T["Green Leaf"],
   "Diablo1:" .. T["Diablo1"],
   "Diablo2:" .. T["Diablo2"],
   "Diablo3:" .. T["Diablo3"],
@@ -51,6 +53,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Turtle2:" .. T["Golden Turtle"],
   "Skull:" .. T["Skull"],
   "Skull2:" .. T["Golden Skull"],
+  "Skull3:" .. T["Skull2"],
+  "Leaf:" .. T["Green Leaf"],
   "Diablo1:" .. T["Diablo1"],
   "Diablo2:" .. T["Diablo2"],
   "Diablo3:" .. T["Diablo3"],
@@ -87,6 +91,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Turtle2:" .. T["Golden Turtle"],
   "Skull:" .. T["Skull"],
   "Skull2:" .. T["Golden Skull"],
+  "Skull3:" .. T["Skull2"],
+  "Leaf:" .. T["Green Leaf"],
   "Diablo1:" .. T["Diablo1"],
   "Diablo2:" .. T["Diablo2"],
   "Diablo3:" .. T["Diablo3"],
@@ -123,6 +129,8 @@ pfUI:RegisterModule("Gryphons", "vanilla:tbc", function ()
   "Turtle2:" .. T["Golden Turtle"],
   "Skull:" .. T["Skull"],
   "Skull2:" .. T["Golden Skull"],
+  "Skull3:" .. T["Skull2"],
+  "Leaf:" .. T["Green Leaf"],
   "Diablo1:" .. T["Diablo1"],
   "Diablo2:" .. T["Diablo2"],
   "Diablo3:" .. T["Diablo3"],
@@ -264,6 +272,10 @@ elseif C.Gryphons.selectleft == "Skull" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skull")
 elseif C.Gryphons.selectleft == "Skull2" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skullg")
+elseif C.Gryphons.selectleft == "Skull3" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\Skull2Left")
+elseif C.Gryphons.selectleft == "Leaf" then
+  AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\LeafLeft")
 elseif C.Gryphons.selectleft == "Lion" then
   AddLeftGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion")
 elseif C.Gryphons.selectleft == "Lion2" then
@@ -372,6 +384,10 @@ elseif C.Gryphons.selectright == "Skull" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skull1")
 elseif C.Gryphons.selectright == "Skull2" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skullg1")
+elseif C.Gryphons.selectright == "Skull3" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\Skull2Right")
+elseif C.Gryphons.selectright == "Leaf" then
+  AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\LeafRight")
 elseif C.Gryphons.selectright == "Lion" then
   AddRightGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion1")
 elseif C.Gryphons.selectright == "Lion2" then
@@ -481,6 +497,10 @@ elseif C.Gryphons.selectlefttop == "Skull" then
   AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skull")
 elseif C.Gryphons.selectlefttop == "Skull2" then
   AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skullg")
+elseif C.Gryphons.selectlefttop == "Skull3" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\Skull2Left")
+elseif C.Gryphons.selectlefttop == "Leaf" then
+  AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\LeafLeft")
 elseif C.Gryphons.selectlefttop == "Lion" then
   AddLeftTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion")
 elseif C.Gryphons.selectlefttop == "Lion2" then
@@ -590,6 +610,10 @@ elseif C.Gryphons.selectrighttop == "Skull" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skull1")
 elseif C.Gryphons.selectrighttop == "Skull2" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\skullg1")
+elseif C.Gryphons.selectrighttop == "Skull3" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\Skull2Right")
+elseif C.Gryphons.selectrighttop == "Leaf" then
+  AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\LeafRight")
 elseif C.Gryphons.selectrighttop == "Lion" then
   AddRightTopGriphon("Interface\\AddOns\\pfUI-gryphons\\artwork\\lion1")
 elseif C.Gryphons.selectrighttop == "Lion2" then
