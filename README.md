@@ -2,7 +2,7 @@
  Add back the gryphons to your actionbars
 
 
-[![screenshot](https://i.imgur.com/z7pqfNw.jpeg)
+![screenshot](https://i.imgur.com/z7pqfNw.jpeg)
 
 ## Installation
 1. Download **[Latest Version](https://github.com/mrrosh/pfUI-Gryphons/archive/refs/heads/master.zip)**
