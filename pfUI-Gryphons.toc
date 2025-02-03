@@ -2,7 +2,7 @@
 ## Title: |cff33ffccpf|cffffffffUI|cffaaaaaa [Gryphons]
 ## Author: Mr_Rosh
 ## Notes: Add back the gryphons to your actionbars.
-## Version: 2.0
+## Version: 3.0
 ## Dependencies: pfUI
 
 # main
