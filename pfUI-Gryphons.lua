@@ -1,11 +1,12 @@
 pfUI:RegisterModule("Gryphons","vanilla:tbc",function()
   -- Ensure defaults exist (for fresh characters)
   if not C.Gryphons then C.Gryphons = {} end
-    C.Gryphons.selectleft = C.Gryphons.selectleft or "GryphonHD3"      -- Default gryphon texture
-    C.Gryphons.img_size   = C.Gryphons.img_size   or "60"               -- Default size
-    C.Gryphons.h_off      = C.Gryphons.h_off      or "-50"              -- Default horizontal offset
-    C.Gryphons.v_off      = C.Gryphons.v_off      or "-5"               -- Default vertical offset
-    C.Gryphons.color      = C.Gryphons.color      or "1,1,1"             -- Default color
+    C.Gryphons.selectleft = C.Gryphons.selectleft     or "GryphonHD3"      -- Default gryphon texture
+    C.Gryphons.img_size   = C.Gryphons.img_size       or "60"              -- Default size
+    C.Gryphons.selectleft   = C.Gryphons.selectleft   or "GryphonHD3"      -- Default image
+    C.Gryphons.h_off      = C.Gryphons.h_off          or "-50"             -- Default horizontal offset
+    C.Gryphons.v_off      = C.Gryphons.v_off          or "-5"              -- Default vertical offset
+    C.Gryphons.color      = C.Gryphons.color          or "1,1,1"           -- Default color
 
   -- Add default positions for left and right endcaps
     C.Gryphons.selectleft_position = C.Gryphons.selectleft_position or "Left"  -- Default position for left endcap
@@ -188,6 +189,9 @@ end
         
         -- Add a header for the Gryphons section
         pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Endcap Settings"], nil, nil, "header")
+		
+        -- Dropdown for selecting the endcap image
+        pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Select gryphon image"], C.Gryphons, "selectleft", "dropdown", pfUI.gui.dropdowns.Gryphons_selectleft)
         
         -- Dropdown for selecting the left endcap position
         pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Select Left Endcap Position"], C.Gryphons, "selectleft_position", "dropdown", pfUI.gui.dropdowns.Gryphons_selectleft_position)
