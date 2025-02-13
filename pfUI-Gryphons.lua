@@ -1,11 +1,16 @@
 pfUI:RegisterModule("Gryphons","vanilla:tbc",function()
   -- Ensure defaults exist (for fresh characters)
   if not C.Gryphons then C.Gryphons = {} end
-  C.Gryphons.selectleft = C.Gryphons.selectleft or "GryphonHD3"
-  C.Gryphons.img_size   = C.Gryphons.img_size   or "60"
-  C.Gryphons.h_off      = C.Gryphons.h_off      or "-50"
-  C.Gryphons.v_off      = C.Gryphons.v_off      or "-5"
-  C.Gryphons.color      = C.Gryphons.color      or "1,1,1"
+    C.Gryphons.selectleft = C.Gryphons.selectleft or "GryphonHD3"      -- Default gryphon texture
+    C.Gryphons.img_size   = C.Gryphons.img_size   or "60"               -- Default size
+    C.Gryphons.h_off      = C.Gryphons.h_off      or "-50"              -- Default horizontal offset
+    C.Gryphons.v_off      = C.Gryphons.v_off      or "-5"               -- Default vertical offset
+    C.Gryphons.color      = C.Gryphons.color      or "1,1,1"             -- Default color
+
+  -- Add default positions for left and right endcaps
+    C.Gryphons.selectleft_position = C.Gryphons.selectleft_position or "Left"  -- Default position for left endcap
+    C.Gryphons.selectright_position = C.Gryphons.selectright_position or "Right" -- Default position for right endcap
+
 
   -- Dropdown definition for selecting the endcap texture
   pfUI.gui.dropdowns.Gryphons_selectleft = {
@@ -28,6 +33,25 @@ pfUI:RegisterModule("Gryphons","vanilla:tbc",function()
     "Diablo3:"..T["Diablo3"],
     "Diablo4:"..T["Diablo4"]
   }
+  
+  -- Dropdown definition for selecting left endcap position
+  pfUI.gui.dropdowns.Gryphons_selectleft_position = {
+    "Main:"..T["Main"],
+    "Top:"..T["Top"],
+    "Left:"..T["Left"],
+    "Right:"..T["Right"],
+    "Vertical:"..T["Vertical"],
+  }
+
+  -- Dropdown definition for selecting right endcap position
+  pfUI.gui.dropdowns.Gryphons_selectright_position = {
+    "Main:"..T["Main"],
+    "Top:"..T["Top"],
+    "Left:"..T["Left"],
+    "Right:"..T["Right"],
+    "Vertical:"..T["Vertical"],
+  }
+
 
   local addonpath
   for _, s in pairs({"","-master","-tbc","-wotlk"}) do 
@@ -41,10 +65,25 @@ pfUI:RegisterModule("Gryphons","vanilla:tbc",function()
 
   local current = { left = nil, right = nil }
 
-  local function AddFrame(parent, texture, color, size, hoff, voff, ext, anchor, relanchor, offX, offY)
+local function GetActionBarPosition(position)
+    if position == "Main" then
+        return pfActionBarMain
+    elseif position == "Top" then
+        return pfActionBarTop
+    elseif position == "Left" then
+        return pfActionBarLeft
+    elseif position == "Right" then
+        return pfActionBarRight
+    elseif position == "Vertical Actionbar" then
+        return pfActionBarVertical
+    end
+end
+
+-- Modify AddFrame function to accept the bar positions
+local function AddFrame(parent, texture, color, size, hoff, voff, ext, anchor, relanchor, offX, offY, actionBarPosition)
     local r, g, b, a = GetStringColor(color)
     local strata = ext and "BACKGROUND" or "HIGH"
-    local f = CreateFrame("Frame", nil, parent)
+    local f = CreateFrame("Frame", nil, actionBarPosition)  -- Use dynamic actionBarPosition here
     f:SetFrameStrata(strata)
     local tex = f:CreateTexture(nil, strata)
     tex:SetTexture(texture)
@@ -52,28 +91,32 @@ pfUI:RegisterModule("Gryphons","vanilla:tbc",function()
     tex:SetAllPoints(f)
     f.texture = tex
     if ext then
-      f:SetWidth(size + 156)
-      f:SetHeight(size + 28)
-      f:SetPoint(anchor, parent, relanchor, hoff + offX, voff + offY)
-      f:SetFrameLevel(0)
+        f:SetWidth(size + 156)
+        f:SetHeight(size + 28)
+        f:SetPoint(anchor, actionBarPosition, relanchor, hoff + offX, voff + offY)
+        f:SetFrameLevel(0)
     else
-      f:SetWidth(size)
-      f:SetHeight(size)
-      f:SetPoint(anchor, parent, relanchor, hoff, voff)
+        f:SetWidth(size)
+        f:SetHeight(size)
+        f:SetPoint(anchor, actionBarPosition, relanchor, hoff, voff)
     end
     f:Show()
     return f
-  end
+end
 
+-- Modify position handling when adding the endcaps
   local function AddLeftGriphon(tex, ext)
-    return AddFrame(pfActionBarMain, tex, C.Gryphons.color, C.Gryphons.img_size, tonumber(C.Gryphons.h_off) or 0, C.Gryphons.v_off, ext, "BOTTOMLEFT", "BOTTOMLEFT", ext and -175 or 0, 0)
+    local position = GetActionBarPosition(C.Gryphons.selectleft_position)  -- Get selected position for left endcap
+    return AddFrame(position, tex, C.Gryphons.color, C.Gryphons.img_size, tonumber(C.Gryphons.h_off) or 0, C.Gryphons.v_off, ext, "BOTTOMLEFT", "BOTTOMLEFT", ext and -175 or 0, 0, position)
   end
 
   local function AddRightGriphon(tex, ext)
+    local position = GetActionBarPosition(C.Gryphons.selectright_position)  -- Get selected position for right endcap
     -- Reverse the horizontal offset by multiplying by -1.
     local rightHOff = -(tonumber(C.Gryphons.h_off) or 0)
-    return AddFrame(pfActionBarMain, tex, C.Gryphons.color, C.Gryphons.img_size, rightHOff, C.Gryphons.v_off, ext, "BOTTOMRIGHT", "BOTTOMRIGHT", 0, 0)
+    return AddFrame(position, tex, C.Gryphons.color, C.Gryphons.img_size, rightHOff, C.Gryphons.v_off, ext, "BOTTOMRIGHT", "BOTTOMRIGHT", 0, 0, position)
   end
+
 
   local function GetLeftTexture(selection)
     if selection == "None" then
@@ -140,18 +183,33 @@ pfUI:RegisterModule("Gryphons","vanilla:tbc",function()
   end
 
   if pfUI.gui.CreateGUIEntry then
+    -- Create a section for Gryphons under the Thirdparty category
     pfUI.gui.CreateGUIEntry(T["Thirdparty"], T["Gryphons"], function()
-      pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Endcap Settings"], nil, nil, "header")
-      pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Select endcap texture"], C.Gryphons, "selectleft", "dropdown", pfUI.gui.dropdowns.Gryphons_selectleft)
-      pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Size"], C.Gryphons, "img_size")
-      pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Horizontal Offset"], C.Gryphons, "h_off")
-      pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Vertical Offset"], C.Gryphons, "v_off")
-      pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Pick Color"], C.Gryphons, "color", "color")
+        
+        -- Add a header for the Gryphons section
+        pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Endcap Settings"], nil, nil, "header")
+        
+        -- Dropdown for selecting the left endcap position
+        pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Select Left Endcap Position"], C.Gryphons, "selectleft_position", "dropdown", pfUI.gui.dropdowns.Gryphons_selectleft_position)
+        
+        -- Dropdown for selecting the right endcap position
+        pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Select Right Endcap Position"], C.Gryphons, "selectright_position", "dropdown", pfUI.gui.dropdowns.Gryphons_selectright_position)
+        
+        -- Add options for size, horizontal and vertical offsets
+        pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Size"], C.Gryphons, "img_size")
+        pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Horizontal Offset"], C.Gryphons, "h_off")
+        pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Vertical Offset"], C.Gryphons, "v_off")
+        
+        -- Add a color picker for endcap color
+        pfUI.gui.CreateConfig(pfUI.gui.UpdaterFunctions["Gryphons"], T["Pick Color"], C.Gryphons, "color", "color")
     end)
   else
+    -- Fallback if the GUI creation fails, used to create the tab without dropdowns
     pfUI.gui.tabs.thirdparty.tabs.Gryphons = pfUI.gui.tabs.thirdparty.tabs:CreateTabChild("Gryphons", true)
     pfUI.gui.tabs.thirdparty.tabs.Gryphons:SetScript("OnShow", function() if not this.setup then this.setup = true end end)
   end
 
-  pfUI.gui.UpdaterFunctions["Gryphons"]() -- update on load
+  -- Update the Gryphons configuration on load
+    pfUI.gui.UpdaterFunctions["Gryphons"]() 
+
 end)
